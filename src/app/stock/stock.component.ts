@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StockService } from '../stock.service';
 import { Stock } from './stock.model';
+import { Router } from '@angular/router';
 
 //decorator
 @Component({
@@ -11,22 +12,34 @@ import { Stock } from './stock.model';
 })
 export class StockComponent implements OnInit {
 
-  @Input() stock: Stock = {
-    name: '',
-    description: '',
-    ceo: '',
-    netWorth: '',
-    stock: 0,
-    website: '',
-    id: 0
-  }
+  // @Input() stock: Stock = {
+  //   name: '',
+  //   description: '',
+  //   ceo: '',
+  //   netWorth: '',
+  //   stock: 0,
+  //   website: '',
+  //   id: 0
+  // }
+  stock: Stock = {
+      name: '',
+      description: '',
+      ceo: '',
+      netWorth: '',
+      stock: 0,
+      website: '',
+      id: 0
+    }
 
-  @Input() message: String = "";
+  // @Input() message: String = "";
+
+  
 
 
-
+//dependcy injection
   constructor(private route:ActivatedRoute,
-    private stockService: StockService
+    private stockService: StockService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -37,6 +50,11 @@ export class StockComponent implements OnInit {
         this.stock = payload;
       })
     })
+  }
+
+  // method doing routing, call router to take us where we need to with the id
+  edit(): void {
+    this.router.navigateByUrl(`/stocks/${this.stock.id}/edit`)
   }
 
 

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StockComponent } from './stock/stock.component';
 import { StocksComponent } from './stocks/stocks.component';
+import { EditstockComponent } from './editstock/editstock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StockComponent,
-    StocksComponent
+    StocksComponent,
+    EditstockComponent
   ],
   imports: [
     BrowserModule,
