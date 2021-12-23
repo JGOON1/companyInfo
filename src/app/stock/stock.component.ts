@@ -45,7 +45,6 @@ export class StockComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const myid = +params['id'];
-
       this.stockService.getStock(myid).subscribe(payload => {
         this.stock = payload;
       })

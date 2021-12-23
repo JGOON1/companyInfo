@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StockComponent } from './stock/stock.component';
 import { StocksComponent } from './stocks/stocks.component';
 import { EditstockComponent } from './editstock/editstock.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditstockComponent } from './editstock/editstock.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
