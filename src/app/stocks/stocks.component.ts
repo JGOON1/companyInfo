@@ -10,6 +10,7 @@ import { Stock } from '../stock/stock.model';
 export class StocksComponent implements OnInit {
 
   stocks: Stock[] = [];
+  messaje: String = "Welcome to this page"
 
   constructor(private stockService: StockService) { }
 

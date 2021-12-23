@@ -21,6 +21,8 @@ export class StockComponent implements OnInit {
     id: 0
   }
 
+  @Input() message: String = "";
+
 
 
   constructor(private route:ActivatedRoute,

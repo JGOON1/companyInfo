@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    background-color: #F6F2D4;
+    height: 15rem;
+}
+
+.card-container {
+    display: flex;
+    background-color: #95D1CC;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 15px;
+    text-align: center;
+    justify-content: space-between;
+}

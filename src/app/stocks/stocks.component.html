@@ -3,6 +3,6 @@
 <div *ngFor="let stock of stocks">
     <!-- [] inputs are like props, need to pass information to app-stock -->
     <!-- () are for outputs -->
-    <app-stock [stock]="stock"></app-stock>
+    <app-stock [stock]="stock" [message]="messaje"></app-stock>
     <!-- <a [routerLink]="['/stocks', stock.id]">{{stock.name}}</a> -->
 </div>

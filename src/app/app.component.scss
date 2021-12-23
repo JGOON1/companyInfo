@@ -1,12 +1,16 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    background-color: gold;
-    width: 100vw;
-    height: 100vh;
+* {
+    background-color: #F6F2D4;
 }
 
+// .container {
+//     display: flex;
+//     flex-direction: column;
+//     background-color: gold;
+//     width: 100vw;
+//     height: 100vh;
+// }
+
 header {
-    background-color: olive;
+    background-color: #5584AC;
     padding: 20px;
 }
