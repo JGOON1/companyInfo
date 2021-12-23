@@ -12,6 +12,9 @@ export class StockService {
   getStocks(): Observable<any> {
     return this.http.get("http://localhost:8082/api/stocks")
   }
+  getStock(id: number): Observable<any> {
+    return this.http.get("http://localhost:8082/api/stocks/"+id)
+  }
 }
 
 

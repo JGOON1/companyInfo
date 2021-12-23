@@ -1,5 +1,8 @@
 <p>stocks works!</p>
 
 <div *ngFor="let stock of stocks">
-    <a routerLink="#">{{stock.name}}</a>
+    <!-- [] inputs are like props, need to pass information to app-stock -->
+    <!-- () are for outputs -->
+    <app-stock [stock]="stock"></app-stock>
+    <!-- <a [routerLink]="['/stocks', stock.id]">{{stock.name}}</a> -->
 </div>

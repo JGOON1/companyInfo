@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StockService } from '../stock.service';
+import { Stock } from '../stock/stock.model';
 
 @Component({
   selector: 'app-stocks',
@@ -8,7 +9,7 @@ import { StockService } from '../stock.service';
 })
 export class StocksComponent implements OnInit {
 
-  stocks = [];
+  stocks: Stock[] = [];
 
   constructor(private stockService: StockService) { }
 
