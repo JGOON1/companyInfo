@@ -36,4 +36,12 @@ export class EditstockComponent implements OnInit {
     })
   }
 
+  update(): void {
+    this.stockService.updateStock(this.stock).subscribe(data => {
+      if(data){
+        this.router.navigateByUrl("/stocks");
+      }
+    })
+  }
+
 }
