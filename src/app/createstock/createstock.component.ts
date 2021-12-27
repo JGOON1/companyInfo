@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { StockService } from '../stock.service';
 import { Stock } from '../stock/stock.model';
 
 
@@ -19,13 +21,19 @@ export class CreatestockComponent implements OnInit {
     id: 0
   }
 
-  constructor() { }
+  constructor(private stockService: StockService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
   create(): void {
-    
+    this.stockService.create(this.newStock).subscribe(data => {
+      console.log(data)
+      if (data) {
+        this.router.navigateByUrl("/stocks")
+      }
+    })
   }
 
 }
