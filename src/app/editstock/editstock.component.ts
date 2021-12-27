@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StockService } from '../stock.service';
 import { Stock } from '../stock/stock.model';
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-editstock',

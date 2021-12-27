@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:"stocks", component:StocksComponent},
   {path:"stocks/:id", component:StockComponent},
   {path:"stocks/:id/edit", component:EditstockComponent},
-  {path:"stocks/create", component:CreatestockComponent}
+  {path:"create", component:CreatestockComponent}
 ];
 
 @NgModule({
