@@ -8,13 +8,15 @@ import { StockComponent } from './stock/stock.component';
 import { StocksComponent } from './stocks/stocks.component';
 import { EditstockComponent } from './editstock/editstock.component';
 import { FormsModule } from '@angular/forms';
+import { CreatestockComponent } from './createstock/createstock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StockComponent,
     StocksComponent,
-    EditstockComponent
+    EditstockComponent,
+    CreatestockComponent
   ],
   imports: [
     BrowserModule,

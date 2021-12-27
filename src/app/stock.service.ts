@@ -21,6 +21,10 @@ export class StockService {
     return this.http.patch(`http://localhost:8082/api/stocks/${stock.id}`, stock)
   }
 
+  create(stock: Stock): Observable <any> {
+    return this.http.post("http://localhost:8082/api/stocks/", stock)
+  }
+
 
 }
 
