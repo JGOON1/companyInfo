@@ -56,5 +56,13 @@ export class StockComponent implements OnInit {
     this.router.navigateByUrl(`/stocks/${this.stock.id}/edit`)
   }
 
+  delete(id: number) {
+    this.stockService.onDelete(id).subscribe(data => {
+      console.log("this is being deleted", data);
+      if (data) {
+        this.router.navigateByUrl("/stocks")
+      }
+    })
+  }
 
 }

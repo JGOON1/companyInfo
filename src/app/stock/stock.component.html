@@ -4,12 +4,14 @@
         <h2>{{stock.name}}</h2>
         <p>{{stock.description}}</p>
         <p>{{stock.netWorth}}</p>
+        <p>{{stock.stock}}</p>
         <p>{{stock.ceo}}</p>
         <p>{{stock.website}}</p>
     </div>
 </div>
 
 <button (click)="edit()">update this stock</button>
+<button (click)="delete(stock.id)">Delete this stock</button>
 
 
 

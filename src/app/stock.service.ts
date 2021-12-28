@@ -25,6 +25,10 @@ export class StockService {
     return this.http.post("http://localhost:8082/api/stocks/", stock)
   }
 
+  onDelete(id: number): Observable <any> {
+    return this.http.delete(`http://localhost:8082/api/stocks/${id}`)
+  }
+
 
 }
 
